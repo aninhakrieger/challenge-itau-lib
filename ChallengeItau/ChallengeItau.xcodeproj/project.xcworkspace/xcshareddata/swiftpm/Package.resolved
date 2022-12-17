@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "itauapiframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aninhakrieger/itauAPIFramework.git",
+      "state" : {
+        "revision" : "9925f84523b9b442d1e8c753dd885194b224cdd8",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

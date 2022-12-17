@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ItauFramework
+import ItauAPIFramework
 
 class SendInformationGateway {
     
