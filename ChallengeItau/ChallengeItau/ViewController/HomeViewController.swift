@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     let homeButton = ITButton(backgroundColor: .systemPurple, title: "Compartilhar informações")
     var info: MobileInfo = .init(systemUptime: "", latitude: "", longitude: "", altitude: "", deviceModel: UIDevice.current.name)
@@ -38,6 +38,10 @@ class HomeViewController: UIViewController {
     }
     
     @objc func postSendInformation() {
+        if let bootTime = bootTime() {
+            info.systemUptime = bootTime.toStringDate()
+        }
+        print(info.systemUptime)
         SendInformationGateway.shared.postSendInformation(data: info) { result in
             switch result {
             case .success(let info):
