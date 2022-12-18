@@ -10,7 +10,13 @@ import CoreLocation
 
 class HomeViewController: BaseViewController {
     
-    let homeButton = ITButton(backgroundColor: .systemPurple, title: "Compartilhar informações")
+    let homeButton = ITButton(backgroundColor: .systemPink, title: "Compartilhar informações")
+    
+    let headerView = UIView()
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
+    var itemViews = [UIView]()
+    
     var info: MobileInfo = .init(systemUptime: "", latitude: "", longitude: "", altitude: "", deviceModel: UIDevice.current.name)
 
     override func viewDidLoad() {
@@ -30,7 +36,8 @@ class HomeViewController: BaseViewController {
         homeButton.addTarget(self, action: #selector(postSendInformation), for: UIControl.Event.touchUpInside)
         
         NSLayoutConstraint.activate([
-            homeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            homeButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            homeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             homeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             homeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             homeButton.heightAnchor.constraint(equalToConstant: 50)
@@ -38,15 +45,16 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func postSendInformation() {
+        self.fullScreenLoading(hide: false)
+        
         if let bootTime = bootTime() {
             info.systemUptime = bootTime.toStringDate()
         }
-        print(info.systemUptime)
+        print(info)
         SendInformationGateway.shared.postSendInformation(data: info) { result in
+            self.fullScreenLoading(hide: true)
             switch result {
-            case .success(let info):
-                print(info.ticket ?? "")
-                
+            case .success(_): self.presentAlertOnMainThread(title: "Sucesso", message: "Informações compartilhadas com sucesso.", buttonTitle: "OK")
             case .failure(let error): self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "OK")
             }
         }

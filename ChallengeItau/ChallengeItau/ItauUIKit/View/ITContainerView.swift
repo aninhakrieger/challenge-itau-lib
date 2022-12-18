@@ -17,12 +17,11 @@ class ITContainerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configure(){
-        backgroundColor = .systemBackground
-        layer.borderColor = UIColor.white.cgColor
+    private func configure(backgorungColor: UIColor = .systemBackground){
+        backgroundColor = backgorungColor
+        layer.borderColor = UIColor.gray.cgColor
         layer.cornerRadius = 16
         layer.borderWidth = 2
         translatesAutoresizingMaskIntoConstraints = false
-        
     }
 }

@@ -25,9 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabbar() -> UITabBarController {
         let tabbar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemPurple
-        tabbar.viewControllers = [createNavigationController(viewController: HomeViewController(), title: "Home", iconImage: UITabBarItem.SystemItem.search, tag: 0),
-                                  createNavigationController(viewController: HomeViewController(), title: "Info", iconImage: UITabBarItem.SystemItem.favorites, tag: 1)]
+        UITabBar.appearance().tintColor = .systemPink
+        tabbar.viewControllers = [createNavigationController(viewController: HomeViewController(), title: "Home", iconImage: UIImage(systemName: "square.and.arrow.up")!, tag: 0),
+                                  createNavigationController(viewController: InfoViewController(), title: "Info", iconImage: UIImage(systemName: "suit.heart.fill")!, tag: 1)]
         
         return tabbar
     }
@@ -64,9 +64,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().tintColor = .systemPurple
     }
     
-    func createNavigationController(viewController: UIViewController, title:String, iconImage: UITabBarItem.SystemItem, tag: Int) -> UINavigationController{
+    func createNavigationController(viewController: UIViewController, title: String, iconImage: UIImage, tag: Int) -> UINavigationController{
         viewController.title = title
-        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: iconImage, tag: tag)
+        viewController.tabBarItem = UITabBarItem(title: title, image: iconImage, tag: tag)
         return UINavigationController(rootViewController: viewController)
     }
 }
