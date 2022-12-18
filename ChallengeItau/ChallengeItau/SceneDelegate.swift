@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createTabbar() -> UITabBarController {
         let tabbar = UITabBarController()
         UITabBar.appearance().tintColor = .systemPink
+        
         tabbar.viewControllers = [createNavigationController(viewController: HomeViewController(), title: "Home", iconImage: UIImage(systemName: "square.and.arrow.up")!, tag: 0),
                                   createNavigationController(viewController: InfoViewController(), title: "Info", iconImage: UIImage(systemName: "suit.heart.fill")!, tag: 1)]
         

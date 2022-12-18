@@ -33,6 +33,7 @@
 		B262EFBC294E588200A0697E /* ItauAPIFramework in Frameworks */ = {isa = PBXBuildFile; productRef = B262EFBB294E588200A0697E /* ItauAPIFramework */; };
 		B262EFBE294E925B00A0697E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFBD294E925B00A0697E /* InfoViewController.swift */; };
 		B262EFC0294E9BE800A0697E /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFBF294E9BE800A0697E /* ProgressIndicator.swift */; };
+		B262EFC7294F527600A0697E /* SendInformationIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFC6294F527600A0697E /* SendInformationIteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		B257A87B294DEE900056C299 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B262EFBD294E925B00A0697E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B262EFBF294E9BE800A0697E /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		B262EFC6294F527600A0697E /* SendInformationIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInformationIteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				B257A864294D742E0056C299 /* ItauUIKit */,
 				B257A85E294D72960056C299 /* Error */,
 				B257A859294D72390056C299 /* Model */,
+				B262EFC5294F51FF00A0697E /* Interator */,
 				B257A856294D71110056C299 /* Service */,
 				B257A861294D73390056C299 /* Extension */,
 				B257A84E294D6B550056C299 /* ViewController */,
@@ -271,6 +274,14 @@
 				B257A874294D79250056C299 /* ITBodyLabel.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		B262EFC5294F51FF00A0697E /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				B262EFC6294F527600A0697E /* SendInformationIteractor.swift */,
+			);
+			path = Interator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				B257A863294D734E0056C299 /* EncodableExtesion.swift in Sources */,
 				B257A870294D78800056C299 /* ITContainerView.swift in Sources */,
 				B257A86A294D77860056C299 /* UIViewControllerExtension.swift in Sources */,
+				B262EFC7294F527600A0697E /* SendInformationIteractor.swift in Sources */,
 				B257A860294D72E30056C299 /* ItauError.swift in Sources */,
 				B262EFBE294E925B00A0697E /* InfoViewController.swift in Sources */,
 			);
