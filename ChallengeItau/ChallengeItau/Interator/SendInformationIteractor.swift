@@ -37,7 +37,7 @@ final class SendInformationIteractor: SendInformationIteractorProtocol {
         
         SendInformationGateway.shared.postSendInformation(data: info) { result in
             switch result {
-            case .success(_): self.viewController?.postSendInfomationSuccess()
+            case .success(let infoResponse): self.viewController?.postSendInfomationSuccess(self.info, ticket: infoResponse.ticket ?? "")
             case .failure(let erro): self.viewController?.postSendInfomationError(error: erro)
             }
         }
@@ -63,6 +63,6 @@ extension SendInformationIteractor: LocationDelegate {
 }
 
 protocol SendInformationViewControlleProtocol: AnyObject {
-    func postSendInfomationSuccess()
+    func postSendInfomationSuccess(_ info: MobileInfo, ticket: String)
     func postSendInfomationError(error: Error)
 }

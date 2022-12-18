@@ -13,5 +13,11 @@ struct Constants {
         static let success = "Sucesso"
         static let successSendInfo = "Informações compartilhadas com sucesso."
         static let OK = "OK"
+        static let systemUptime = "SystemUptime"
+        static let longitude = "Longitude"
+        static let latitude = "Latitude"
+        static let deviceModel = "DeviceModel"
+        static let altitude = "Altitude"
+        static let ticket = "ticket"
     }
 }
