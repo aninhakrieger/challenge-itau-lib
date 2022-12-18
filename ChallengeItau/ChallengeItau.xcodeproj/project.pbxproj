@@ -34,6 +34,7 @@
 		B262EFBE294E925B00A0697E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFBD294E925B00A0697E /* InfoViewController.swift */; };
 		B262EFC0294E9BE800A0697E /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFBF294E9BE800A0697E /* ProgressIndicator.swift */; };
 		B262EFC7294F527600A0697E /* SendInformationIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFC6294F527600A0697E /* SendInformationIteractor.swift */; };
+		B262EFCA294F864000A0697E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EFC9294F864000A0697E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B262EFBD294E925B00A0697E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B262EFBF294E9BE800A0697E /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		B262EFC6294F527600A0697E /* SendInformationIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInformationIteractor.swift; sourceTree = "<group>"; };
+		B262EFC9294F864000A0697E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				B257A856294D71110056C299 /* Service */,
 				B257A861294D73390056C299 /* Extension */,
 				B257A84E294D6B550056C299 /* ViewController */,
+				B262EFC8294F862200A0697E /* Utilities */,
 				B257A84D294D69310056C299 /* support-files */,
 				B257A81D294D684A0056C299 /* AppDelegate.swift */,
 				B257A81F294D684A0056C299 /* SceneDelegate.swift */,
@@ -284,6 +287,14 @@
 			path = Interator;
 			sourceTree = "<group>";
 		};
+		B262EFC8294F862200A0697E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B262EFC9294F864000A0697E /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B257A873294D79010056C299 /* ITTitleLabel.swift in Sources */,
+				B262EFCA294F864000A0697E /* Constants.swift in Sources */,
 				B257A822294D684A0056C299 /* ViewController.swift in Sources */,
 				B257A87A294DEDA80056C299 /* DateExtesion.swift in Sources */,
 				B257A81E294D684A0056C299 /* AppDelegate.swift in Sources */,

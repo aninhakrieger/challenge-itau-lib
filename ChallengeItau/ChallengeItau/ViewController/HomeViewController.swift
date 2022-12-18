@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: BaseViewController {
 
     var interactor: SendInformationIteractor?
-    let homeButton = ITButton(backgroundColor: .systemPink, title: "Compartilhar informações")
+    let homeButton = ITButton(backgroundColor: .systemPink, title: Constants.Strings.sharedInfo)
     
     let headerView = UIView()
     let itemViewOne = UIView()
@@ -57,11 +57,11 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: SendInformationViewControlleProtocol {
     func postSendInfomationSuccess() {
         self.fullScreenLoading(hide: true)
-        self.presentAlertOnMainThread(title: "Sucesso", message: "Informações compartilhadas com sucesso.", buttonTitle: "OK")
+        self.presentAlertOnMainThread(title: Constants.Strings.success, message: Constants.Strings.successSendInfo, buttonTitle: Constants.Strings.OK)
     }
     
     func postSendInfomationError(error: Error) {
         self.fullScreenLoading(hide: true)
-        self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: error.localizedDescription, buttonTitle: "OK")
+        self.presentAlertOnMainThread(title: ItauError.unableToComplete.rawValue, message: error.localizedDescription, buttonTitle: Constants.Strings.OK)
     }
 }

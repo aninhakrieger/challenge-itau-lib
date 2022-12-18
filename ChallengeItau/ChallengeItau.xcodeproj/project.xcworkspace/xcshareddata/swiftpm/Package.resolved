@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aninhakrieger/itauAPIFramework.git",
       "state" : {
-        "revision" : "074c660102f8da984f6b388d81768b76d57086c1",
-        "version" : "2.1.3"
+        "revision" : "3e9df8b17b83c8e2198ce72eb2dea1ad25d162de",
+        "version" : "2.1.4"
       }
     }
   ],
