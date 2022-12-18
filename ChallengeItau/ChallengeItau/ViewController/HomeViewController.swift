@@ -50,16 +50,8 @@ class HomeViewController: BaseViewController {
     
     @objc func postSendInformation() {
         self.fullScreenLoading(hide: false)
-        
-        guard let bootTime = bootTime() else {
-            interactor?.postSendInfomation(bootTime: "")
-            return
-        }
-        
-        interactor?.postSendInfomation(bootTime: bootTime.toStringDate())
+        interactor?.postSendInfomation()
     }
-    
-   
 }
 
 extension HomeViewController: SendInformationViewControlleProtocol {

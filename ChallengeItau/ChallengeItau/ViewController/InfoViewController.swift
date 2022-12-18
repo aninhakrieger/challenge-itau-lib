@@ -8,11 +8,12 @@
 import UIKit
 import WebKit
 
-class InfoViewController: UIViewController, WKNavigationDelegate {
+class InfoViewController: BaseViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        self.fullScreenLoading(hide: false)
         loadWebView()
     }
     
@@ -29,5 +30,9 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: "https://github.com/aninhakrieger")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.fullScreenLoading(hide: true)
     }
 }
